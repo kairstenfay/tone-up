@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+<style>
+    body {
+        background: linear-gradient(35deg, #CCFFFF, ghostwhite, #FFCCCC);
+    }
+    #title {
+        font-family: Lobster, monospace;
+        text-align: center;
+        color: blue;
+    }
+    p {
+        font-size: 16px;
+    }
+    .thick-green-border {
+        border-color: blue;
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 50%;
+    }
+    .smaller-image {
+        width: 100px;
+    }
+    [type='checkbox']{
+        margin: 10px 0px 15px 0px;
+    }
+    .fullCard {
+        background-color: white;
+        width: 245px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 4px;
+    }
+    .cardContent {
+        padding: 10px;
+    }
+    .cardText {
+        margin-bottom: 30px;
+    }
+    #thumbnail {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+
+</style>
+
+<html>
+    <div class="fullCard" id="thumbnail">
+        <div class="cardContent">
+            <div class="cardText">
+                <h2 id="title">Tone-Up Fitness App</h2>
+
+                <p><a href="#">Click here</a> to learn more.</p>
+
+                <a href="#"><img class="smaller-image thick-green-border"
+                                 src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+                <hr>
+            </div>
+            <div class="cardForm">
+                <p>Workouts:</p>
+                <ul>
+                    <li>Cardio</li>
+                    <li>Weightlifting</li>
+                    <li>Yoga</li>
+                </ul>
+                <p>Top 3 exercises:</p>
+                <ol>
+                    <li>Dead Lift</li>
+                    <li>Squat</li>
+                    <li>Bench Press</li>
+                </ol>
+
+                <form action="/submit-exercise">
+                    <label for="lbs"><input id="lbs" type="radio" name="measure"> Lbs</label>
+                    <label for="kg"><input id="kg" type="radio" name="measure"> Kg</label>
+                    <label for="reps"><input id="reps" type="radio" name="measure"> Reps</label>
+                    <label for="other"><input id="other" type="radio" name="measure"> Other</label><br>
+
+                    <label><input type="checkbox" name="Pushed self?"> Pushed self?</label><br>
+
+                    <input type="text" placeholder="exercise type" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</html>
