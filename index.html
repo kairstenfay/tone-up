@@ -4,39 +4,53 @@
 <style>
     body {
         background: linear-gradient(35deg, #CCFFFF, ghostwhite, #FFCCCC);
+        width: 100%;
+        height: 100%;
+    }
+    head {
+        align-content: center;
+    }
+    main {
+        align-content: center;
+        text-align: center;
     }
     #title {
         font-family: Lobster, monospace;
         text-align: center;
-        color: blue;
+        color: black;
     }
     p {
         font-size: 16px;
+        text-align: center;
+    }
+    ol {
+        align-content: center;
     }
     .thick-green-border {
-        border-color: blue;
-        border-width: 5px;
-        border-style: solid;
+        border: 3px solid black;
         border-radius: 50%;
     }
     .smaller-image {
+        display: block;
         width: 100px;
+        margin: auto;
     }
     [type='checkbox']{
-        margin: 10px 0px 15px 0px;
+        margin: 10px 0 15px 0;
     }
-    .fullCard {
+    .full-card {
         background-color: white;
-        width: 245px;
+        min-width: 90vh;
+        max-width: 800px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        margin: 10px 5px;
+        margin: auto;
         padding: 4px;
     }
-    .cardContent {
+    .card-content {
         padding: 10px;
     }
-    .cardText {
+    .card-text {
         margin-bottom: 30px;
     }
     #thumbnail {
@@ -46,42 +60,55 @@
 </style>
 
 <html>
-    <div class="fullCard" id="thumbnail">
-        <div class="cardContent">
+    <div class="full-card" id="thumbnail">
+        <div class="card-content">
             <div class="cardText">
-                <h2 id="title">Tone-Up Fitness App</h2>
+                <head>
+                    <h1 id="title">Tone-Up Fitness App</h1>
 
-                <p><a href="#">Click here</a> to learn more.</p>
+                    <p><a href="#">Click here</a> to learn more.</p>
 
-                <a href="#"><img class="smaller-image thick-green-border"
-                                 src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-                <hr>
+                    <a href="#"><img class="smaller-image thick-green-border"
+                                     src="https://bit.ly/fcc-relaxing-cat"
+                                     alt="A cute orange cat lying on its back."></a>
+                    <hr>
+                </head>
             </div>
-            <div class="cardForm">
-                <p>Workouts:</p>
-                <ul>
-                    <li>Cardio</li>
-                    <li>Weightlifting</li>
-                    <li>Yoga</li>
-                </ul>
-                <p>Top 3 exercises:</p>
-                <ol>
-                    <li>Dead Lift</li>
-                    <li>Squat</li>
-                    <li>Bench Press</li>
-                </ol>
+            <div class="card-text">
+                <main>
+                    <h2>Your workout summary</h2>
+                    <p>Top 3 exercises this month:</p>
+                    <ol>
+                        <li>Dead Lift</li>
+                        <li>Squat</li>
+                        <li>Bench Press</li>
+                    </ol>
+                    <br>
+                    <form action="/submit-exercise">
+                        <legend>Choose an exercise: </legend>
+                        <br>
+                        <label for="choose-an-exercise"><input id="choose-an-exercise" type="radio"
+                                                               name="Exercise Category"> Running</label>
+                        <label for="choose-an-exercise"><input id="choose-an-exercise" type="radio"
+                                                               name="Exercise Category"> Weightlifting</label>
+                        <label for="choose-an-exercise"><input id="choose-an-exercise" type="radio"
+                                                               name="Exercise Category"> Yoga</label>
+                        <br>
+                        <br>
+                        <label for="lbs"><input id="lbs" type="radio" name="measure"> Lbs</label>
+                        <label for="kg"><input id="kg" type="radio" name="measure"> Kg</label>
+                        <label for="reps"><input id="reps" type="radio" name="measure"> Reps</label>
+                        <label for="other"><input id="other" type="radio" name="measure"> Other</label>
+                        <br>
 
-                <form action="/submit-exercise">
-                    <label for="lbs"><input id="lbs" type="radio" name="measure"> Lbs</label>
-                    <label for="kg"><input id="kg" type="radio" name="measure"> Kg</label>
-                    <label for="reps"><input id="reps" type="radio" name="measure"> Reps</label>
-                    <label for="other"><input id="other" type="radio" name="measure"> Other</label><br>
-
-                    <label><input type="checkbox" name="Pushed self?"> Pushed self?</label><br>
-
-                    <input type="text" placeholder="exercise type" required>
-                    <button type="submit">Submit</button>
-                </form>
+                        <label for="pushed-self"><input id="pushed-self" type="checkbox"
+                                                        name="Pushed self?"> Pushed self?</label>
+                        <br>
+                        <br>
+                        <input type="text" placeholder="exercise name" required>
+                        <button type="submit">Submit</button>
+                    </form>
+                </main>
             </div>
         </div>
     </div>
