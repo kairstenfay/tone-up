@@ -2,11 +2,25 @@ body {
     background: linear-gradient(35deg, #CCFFFF, ghostwhite, #FFCCCC);
     width: 100%;
     height: 100%;
-    display: flex;
 }
 header, main {
     align-content: center;
     text-align: center;
+}
+h2 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 32px;
+    margin: 0;
+    padding: 0 0 15px 0;
+}
+h3, legend {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 28px;
+    margin: 0 10px 0 0;
+}
+.greeting {
+    display: flex;
+    max-height: 200px;
 }
 #title {
     font-family: "Amatic SC", sans-serif;
@@ -15,36 +29,38 @@ header, main {
 }
 p {
     font-size: 16px;
-    text-align: center;
     font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: left;
 }
 ol {
     align-content: center;
 }
 .thick-border {
     border: 3px solid black;
-    border-radius: 50px
-}
-img {
-    max-height: 100%;
-    max-width: 100%;
+    border-radius: 50px;
 }
 .user-icon {
-    display: flex;
-    flex-direction: row;
-    max-width: 200px;
-    max-height: 100%;
+    display: block;
     padding-bottom: 0;
-    margin: 0 0 0 100px;
+    margin: 0 25px 0 100px;
+    max-height: 150px;
+    height: auto;
+    width: auto;
 }
 [type='checkbox']{
     margin: 10px 0 15px 0;
 }
 .user-card {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: stretch;
+    text-align: left;
+    flex-direction: column;
+    padding: 10px;
+    border: 2px solid black;
+}
+.stats-block {
+    display: flex;
+    flex-align: left;
 }
 .full-card {
     background-color: white;
@@ -57,8 +73,6 @@ img {
 }
 .card-content {
     padding: 10px;
-    display: flex;
-    flex-direction: row;
 }
 #thumbnail {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -66,18 +80,4 @@ img {
 fieldset {
     border-width: 0;
     padding: 0 25px 25px 25px;
-}
-legend {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 32px;
-}
-.user-stats {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 28px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.big {
-    font-size: 32px;
 }
