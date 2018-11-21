@@ -1,116 +1,67 @@
 <!DOCTYPE html>
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
 
-<style>
-    body {
-        background: linear-gradient(35deg, #CCFFFF, ghostwhite, #FFCCCC);
-        width: 100%;
-        height: 100%;
-    }
-    head {
-        align-content: center;
-    }
-    main {
-        align-content: center;
-        text-align: center;
-    }
-    #title {
-        font-family: Lobster, monospace;
-        text-align: center;
-        color: black;
-    }
-    p {
-        font-size: 16px;
-        text-align: center;
-    }
-    ol {
-        align-content: center;
-    }
-    .thick-green-border {
-        border: 3px solid black;
-        border-radius: 50%;
-    }
-    .smaller-image {
-        display: block;
-        width: 100px;
-        margin: auto;
-    }
-    [type='checkbox']{
-        margin: 10px 0 15px 0;
-    }
-    .full-card {
-        background-color: white;
-        min-width: 90vh;
-        max-width: 800px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        margin: auto;
-        padding: 4px;
-    }
-    .card-content {
-        padding: 10px;
-    }
-    .card-text {
-        margin-bottom: 30px;
-    }
-    #thumbnail {
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    }
-
-</style>
-
-<html>
+<body>
     <div class="full-card" id="thumbnail">
-        <div class="card-content">
-            <div class="cardText">
-                <head>
-                    <h1 id="title">Tone-Up Fitness App</h1>
-
-                    <p><a href="#">Click here</a> to learn more.</p>
-
-                    <a href="#"><img class="smaller-image thick-green-border"
-                                     src="https://bit.ly/fcc-relaxing-cat"
-                                     alt="A cute orange cat lying on its back."></a>
-                    <hr>
-                </head>
+        <header>
+            <h1 id="title">Tone-Up Fitness App</h1>
+                <img class="user-icon thick-border"
+                             src="https://i.ytimg.com/vi/n7gcats5uCQ/maxresdefault.jpg"
+                             alt="A sloth posing on the lawn.">
+            <div class="user-card">
+                <h2 class="user-stats big">Kairsten Fay</h2>
+                <!-- <h2 class="user-stats-header">Workouts Logged</h2>
+                <p>132</p>
+                <h2 class="user-stats-header">Avg time between workouts</h2>
+                <p>3.4< days/p> -->
             </div>
-            <div class="card-text">
-                <main>
-                    <h2>Your workout summary</h2>
-                    <p>Top 3 exercises this month:</p>
-                    <ol>
-                        <li>Dead Lift</li>
-                        <li>Squat</li>
-                        <li>Bench Press</li>
-                    </ol>
+        </header>
+        <main>
+            <div class="card-content">
+                <fieldset>
+                <legend>Your workout summary</legend>
+                <p>Top 3 exercises this month:</p>
+                <ol>
+                    <li>Dead Lift</li>
+                    <li>Squat</li>
+                    <li>Bench Press</li>
+                </ol>
+                </fieldset>
+                <br>
+                <form action="/submit-exercise">
+                    <fieldset>
+                    <legend>Choose an exercise: </legend>
+                    <label for="running"><input id="running" type="radio"
+                                                           name="Exercise Category"> Running</label>
+                    <label for="weightlifting"><input id="weightlifting" type="radio"
+                                                           name="Exercise Category"> Weightlifting</label>
+                    <label for="choose-an-exercise"><input id="choose-an-exercise" type="radio"
+                                                           name="Exercise Category"> Yoga</label>
+                    </fieldset>
                     <br>
-                    <form action="/submit-exercise">
-                        <legend>Choose an exercise: </legend>
-                        <br>
-                        <label for="choose-an-exercise"><input id="choose-an-exercise" type="radio"
-                                                               name="Exercise Category"> Running</label>
-                        <label for="choose-an-exercise"><input id="choose-an-exercise" type="radio"
-                                                               name="Exercise Category"> Weightlifting</label>
-                        <label for="choose-an-exercise"><input id="choose-an-exercise" type="radio"
-                                                               name="Exercise Category"> Yoga</label>
-                        <br>
-                        <br>
-                        <label for="lbs"><input id="lbs" type="radio" name="measure"> Lbs</label>
-                        <label for="kg"><input id="kg" type="radio" name="measure"> Kg</label>
-                        <label for="reps"><input id="reps" type="radio" name="measure"> Reps</label>
-                        <label for="other"><input id="other" type="radio" name="measure"> Other</label>
-                        <br>
-
-                        <label for="pushed-self"><input id="pushed-self" type="checkbox"
-                                                        name="Pushed self?"> Pushed self?</label>
-                        <br>
-                        <br>
-                        <input type="text" placeholder="exercise name" required>
-                        <button type="submit">Submit</button>
-                    </form>
-                </main>
+                    <fieldset>
+                    <legend>Measure: </legend>
+                    <label for="lbs"><input id="lbs" type="radio" name="measure"> Lbs</label>
+                    <label for="kg"><input id="kg" type="radio" name="measure"> Kg</label>
+                    <label for="reps"><input id="reps" type="radio" name="measure"> Reps</label>
+                    <label for="other"><input id="other" type="radio" name="measure"> Other</label>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                    <label for="pushed-self"><input id="pushed-self" type="checkbox"
+                                                    name="Pushed self?"> Pushed self?</label>
+                    </fieldset>
+                    <br>
+                    <input type="text" placeholder="exercise name" required>
+                    <button type="submit">Submit</button>
+                </form>
             </div>
-        </div>
-    </div>
-
-</html>
+            </main>
+            </div>
+</body>
+<footer>
+</footer>
