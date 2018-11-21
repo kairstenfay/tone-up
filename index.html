@@ -9,28 +9,29 @@
     <div class="full-card" id="thumbnail">
         <header>
             <h1 id="title">Tone-Up Fitness App</h1>
-        <div class="card-content greeting">
-                <img class="user-icon thick-border"
-                             src="https://i.ytimg.com/vi/n7gcats5uCQ/maxresdefault.jpg"
-                             alt="A sloth posing on the lawn." />
-            <div class="user-card">
-                <h2>Kairsten Fay</h2>
-                <div class="stats-block">
-                    <h3>Workouts Logged:</h3>
-                    <p>132</p>
+            <div class="user-stats">
+                <div class="image-cropper">
+                    <img class="user-icon"
+                                 src="https://i.ytimg.com/vi/n7gcats5uCQ/maxresdefault.jpg"
+                                 alt="A sloth posing on the lawn." />
                 </div>
-                <div class="stats-block">
-                    <h3>Avg time between workouts:</h3>
-                    <p>3.4 days</p>
+                <div class="user-card">
+                    <h2>Kairsten Fay</h2>
+                    <div class="stats-block">
+                        <h3>Workouts Logged:</h3>
+                        <p>132</p>
+                    </div>
+                    <div class="stats-block">
+                        <h3>Avg time between workouts:</h3>
+                        <p>3.4 days</p>
+                    </div>
                 </div>
             </div>
-        </div>
         </header>
         <main>
-            <div class="card-content">
+            <div class="content-block">
                 <fieldset>
-                <legend>Your workout summary</legend>
-                <p>Top 3 exercises this month:</p>
+                <legend>Top 3 exercises this month:</legend>
                 <ol>
                     <li>Dead Lift</li>
                     <li>Squat</li>
@@ -49,6 +50,14 @@
                                                            name="Exercise Category"> Yoga</label>
                     </fieldset>
                     <br>
+                    <fieldset>
+                        <label for="exercise-type">Exercise type: </label>
+                            <select id="exercise-type" name="exercise-type">
+                                <option value="upper-body">Upper body</option>
+                                <option value="abs">Abs</option>
+                                <option value="lower-body">Lower body</option>
+                            </select>
+                    </fieldset>
                     <fieldset>
                     <legend>Measure: </legend>
                     <label for="lbs"><input id="lbs" type="radio" name="measure"> Lbs</label>
