@@ -6,52 +6,57 @@
 </head>
 
 <body>
-    <div class="full-card" id="thumbnail">
+    <div class="full-card">
         <header>
             <h1 id="title">Tone-Up Fitness App</h1>
-            <div class="user-stats">
-                <div class="image-cropper">
-                    <img class="user-icon"
+            <div class="user container">
+                <img class="avatar"
                                  src="https://i.ytimg.com/vi/n7gcats5uCQ/maxresdefault.jpg"
                                  alt="A sloth posing on the lawn." />
-                </div>
-                <div class="user-card">
-                    <h2>Kairsten Fay</h2>
-                    <div class="stats-block">
-                        <h3>Workouts Logged:</h3>
+                <h2>Kairsten Fay</h2>
+                <div class="stats container">
+                        <h3>Total Workouts Logged:</h3>
                         <p>132</p>
-                    </div>
-                    <div class="stats-block">
-                        <h3>Avg time between workouts:</h3>
+                        <h3>Avg. time between workouts:</h3>
                         <p>3.4 days</p>
-                    </div>
                 </div>
             </div>
         </header>
         <main>
             <div class="content-block">
-                <fieldset>
-                <legend>Top 3 exercises this month:</legend>
-                <ol>
-                    <li>Dead Lift</li>
-                    <li>Squat</li>
-                    <li>Bench Press</li>
-                </ol>
-                </fieldset>
-                <br>
+                <div class="summary-block">
+                    <fieldset>
+                    <legend>Top 3 exercises this month:</legend>
+                    <ol>
+                        <li>Dead Lift</li>
+                        <li>Squat</li>
+                        <li>Bench Press</li>
+                    </ol>
+                    </fieldset>
+                    <br>
+                    <h3>Suggested Exercise:</h3>
+                    <ul>
+                        <li>Push ups (last done 34 days ago)</li>
+                        <li>Lunges (last done 3 days ago)</li>
+                    </ul>
+                </div>
                 <form action="/submit-exercise">
                     <fieldset>
-                    <legend>Choose an exercise: </legend>
-                    <label for="running"><input id="running" type="radio"
-                                                           name="Exercise Category"> Running</label>
-                    <label for="weightlifting"><input id="weightlifting" type="radio"
-                                                           name="Exercise Category"> Weightlifting</label>
-                    <label for="choose-an-exercise"><input id="choose-an-exercise" type="radio"
-                                                           name="Exercise Category"> Yoga</label>
+                    <legend>Log an exercise: </legend>
+                    <label for="running">
+                        <input id="running" type="radio" name="Exercise Category"> Running
+                    </label>
+                    <label for="weightlifting">
+                        <input id="weightlifting" type="radio" name="Exercise Category"> Weightlifting
+                    </label>
+                    <label for="choose-an-exercise">
+                        <input id="choose-an-exercise" type="radio" name="Exercise Category"> Yoga
+                    </label>
                     </fieldset>
                     <br>
                     <fieldset>
-                        <label for="exercise-type">Exercise type: </label>
+                        <label for="exercise-type">Exercise type:
+                        </label>
                             <select id="exercise-type" name="exercise-type">
                                 <option value="upper-body">Upper body</option>
                                 <option value="abs">Abs</option>
@@ -67,16 +72,17 @@
                     </fieldset>
                     <br>
                     <fieldset>
-                    <label for="pushed-self"><input id="pushed-self" type="checkbox"
-                                                    name="Pushed self?"> Pushed self?</label>
+                    <label for="pushed-self"><input id="pushed-self" type="checkbox" name="Pushed self?">
+                        Pushed self?</label>
                     </fieldset>
                     <br>
                     <input type="text" placeholder="exercise name" required>
                     <button type="submit">Submit</button>
                 </form>
             </div>
-            </main>
-            </div>
+        </main>
+    </div>
 </body>
 <footer>
+    (c) 2018
 </footer>

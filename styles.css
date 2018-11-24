@@ -1,10 +1,11 @@
 body {
-    background: linear-gradient(35deg, #CCFFFF, ghostwhite, #FFCCCC);
+    background: linear-gradient(35deg, #CCFFFF, ghostwhite, #AEC381) fixed;
     width: 100%;
     height: 100%;
 }
 header, main {
     align-content: center;
+    justify-content: center;
     text-align: center;
 }
 h2 {
@@ -14,16 +15,10 @@ h2 {
     padding: 0 0 15px 0;
 }
 h3, legend {
-    font-family: "Arial Narrow", sans-serif;
+    font-family: system-ui, sans-serif;
     font-size: 18px;
     margin: 0 10px 0 0;
     font-weight: normal;
-}
-.user-stats {
-    justify-content: space-evenly;
-    display: flex;
-    max-height: 200px;
-    padding: 10px;
 }
 #title {
     font-family: "Amatic SC", sans-serif;
@@ -40,52 +35,76 @@ ol {
     text-align: left;
     list-style-position: inside;
 }
-.image-cropper {
-    border: 3px solid black;
-    width: 100px;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-}
-.user-icon {
+.avatar {
     display: inline;
-    margin-left: -25%; /* centers the image */
-    height: 100%;
-    width: auto;
+    margin: auto;
+    height: auto;
+    width: 50%;
+    border-radius: 50px;
+    border: black dashed 1.5px;
 }
 [type='checkbox']{
     margin: 10px 0 15px 0;
 }
 .user-card {
-    display: flex;
-    text-align: left;
+    flex: 1 1 250px;
+    /*  text-align: left; */
     flex-direction: column;
     padding: 10px;
     border: 2px solid black;
-}
-.stats-block {
+    margin: 0 0 0 25px;
+    justify-content: center;
     display: flex;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    justify-content: center;
+    align-content: center;
+}
+.user.container {
+    margin: auto;
+    padding: 40px;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    max-width: 90%;
+}
+.stats.container {
+    grid-template-columns: 5fr 1fr;
     justify-content: space-between;
 }
+/*.stats-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    padding: 25px 0 0 25px;
+}
+*/
 .full-card {
     background-color: white;
     max-width: 80vh;
-    min-width: 500px;
+    /*min-width: 500px;*/
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: auto;
     padding: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 500px;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .content-block {
     padding: 10px;
     display: flex;
     justify-content: space-between;
 }
-#thumbnail {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
 fieldset {
     border-width: 0;
     padding: 0 25px 25px 25px;
+}
+footer {
+    padding: 10px 0 0 0;
+    text-align: center;
 }
