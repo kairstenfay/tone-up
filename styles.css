@@ -43,8 +43,6 @@ p {
 }
 ol, ul {
     text-align: left;
-    list-style-position: inside;
-    padding: 0 0 0 10px;
     margin: auto;
 }
 fieldset {
@@ -60,11 +58,13 @@ hr {
     width: 100%;
 }
 button {
-    background-color: #CCFFFF;
+    background-color: black;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 60%;
     margin: auto;
+    color: white;
+    font-weight: bold;
 }
 .full-card {
     background-color: white;
@@ -84,7 +84,7 @@ button {
     color: black;
     font-size: 51px;
     margin: auto;
-    padding: 50px 0 10px 0;
+    padding: 50px 0 0 0;
 }
 #motivational-quote {
     padding: 0 0 50px 0;
@@ -124,7 +124,15 @@ button {
     width: 80%;
 }
 .stats.container {
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 2fr 1fr;
     justify-content: space-between;
     align-content: center;
+}
+#line-break {
+    display: flex;
+    flex-direction: row;
+}
+select {
+    background-color: black;
+    color: white;
 }
